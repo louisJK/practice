@@ -25,7 +25,7 @@ ul{
     height: 40vh;
 }
 .main #daumRoughmapContainer1542310215058{
-    width: 100%;
+    width: 100% !important;
     height: 40vh;
 }
 .main img{
