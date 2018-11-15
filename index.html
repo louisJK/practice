@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be8311b049ceb31f29f9ae93e786bc0f"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Wedding Invitation</title>
     <script>
@@ -31,6 +32,7 @@
         <img src="./img/wedding7page/images/img_05.png" alt="">
         <img src="./img/wedding7page/images/img_06.png" alt="">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26100.198783656604!2d129.07418311645372!3d35.143529183333314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ed323d37b165%3A0xe5fe5f14a19e55af!2z7Jik7IWY67iM66a_7KeA!5e0!3m2!1sja!2skr!4v1542303136415" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>        <img src="./img/wedding7page/images/img_08.png" alt="">
+        <div id="map" style="width:500px;height:400px;"></div>
         <img src="./img/wedding7page/images/img_09.png" alt="">
         <ul class="telBtn">
             <li><a href="tel:010-5209-0471"><img src="./img/wedding7page/images/img_10.png" alt=""></a></li>
@@ -77,6 +79,15 @@
             });
             }
         //]]>
+        </script>
+        <script>
+            var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+            var options = { //지도를 생성할 때 필요한 기본 옵션
+                center: new daum.maps.LatLng(35.15381110161136, 129.12457759007359), //지도의 중심좌표.
+                level: 3 //지도의 레벨(확대, 축소 정도)
+            };
+
+            var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
         </script>
     </div>
 </body>
