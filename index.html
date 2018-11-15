@@ -41,23 +41,40 @@
             <img src="./img/wedding7page/images/img_13.png" alt="">
         </a>
         <script type='text/javascript'>
-            //<![CDATA[
-              // 사용할 앱의 JavaScript 키를 설정해 주세요.
-              Kakao.init('be8311b049ceb31f29f9ae93e786bc0f');
-              // 카카오 로그인 버튼을 생성합니다.
-              Kakao.Link.createTalkLinkButton({
-                container: '#kakao-link-btn',
-                label: '이준수♡김혜나 결혼 청첩장',
-                image: {
-                src: './img/wedding7page/images/img_01.png',
-                width: '300',
-                height: '200'
-                },
-                webButton: {
-                text: '우리 결혼합니다!',
-                url: 'https://louisjk.github.io/practice_web/'                }
-              });
-            //]]>
+        //<![CDATA[
+            // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+            Kakao.init('be8311b049ceb31f29f9ae93e786bc0f');
+            // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+            Kakao.Link.createDefaultButton({
+            container: '#kakao-link-btn',
+            objectType: 'location',
+            address: '부산광역시 수영구 광안해변로278번길 42 오션브릿지 B동 14층',
+            addressTitle: '그레이스K 웨딩홀',
+            content: {
+                title: '이준수 ♥︎ 김혜나 결혼 청첩장',
+                description: '우리 결혼합니다♥︎',
+                imageUrl: './img/wedding7page/images/img_01.png',
+                link: {
+                mobileWebUrl: 'https://louisjk.github.io/practice_web/',
+                webUrl: 'https://louisjk.github.io/practice_web/'
+                }
+            },
+            social: {
+                likeCount: 286,
+                commentCount: 45,
+                sharedCount: 845
+            },
+            buttons: [
+                {
+                title: '웹으로 보기',
+                link: {
+                    mobileWebUrl: 'https://louisjk.github.io/practice_web/',
+                    webUrl: 'https://louisjk.github.io/practice_web/'
+                }
+                }
+            ]
+            });
+        //]]>
         </script>
     </div>
 </body>
