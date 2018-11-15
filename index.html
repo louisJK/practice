@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Wedding Invitation</title>
     <script>
@@ -36,7 +37,28 @@
             <li><a href="tel:010-2532-0627"><img src="./img/wedding7page/images/img_11.png" alt=""></a></li>
         </ul>
         <img src="./img/wedding7page/images/img_12.png" alt="">
-        <img src="./img/wedding7page/images/img_13.png" alt="">
+        <a id="kakao-link-btn" href="javascript:;">
+            <img src="./img/wedding7page/images/img_13.png" alt="">
+        </a>
+        <script type='text/javascript'>
+            //<![CDATA[
+              // 사용할 앱의 JavaScript 키를 설정해 주세요.
+              Kakao.init('be8311b049ceb31f29f9ae93e786bc0f');
+              // 카카오 로그인 버튼을 생성합니다.
+              Kakao.Link.createTalkLinkButton({
+                container: '#kakao-link-btn',
+                label: '썸네일 이미지 위에 뜰 텍스트 입니다.',
+                image: {
+                src: '썸네일 이미지 경로',
+                width: '300',
+                height: '200'
+                },
+                webButton: {
+                text: '트라이트라이',
+                url: 'https://louisjk.github.io/practice_web/'                }
+              });
+            //]]>
+        </script>
     </div>
 </body>
 </html>
